@@ -14,3 +14,9 @@ def test_get_file():
 
     response = client.get(f'/{key}')
     assert response.status_code == 200
+    assert response.content == b'example file content'
+
+    key2 = 'not_exist'
+    response2 = client.get(f'/{key2}')
+    assert response2.status_code == 400
+    assert response2.content == b'{"detail":"There is no such a key"}'
