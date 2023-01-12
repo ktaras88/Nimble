@@ -1,10 +1,6 @@
 import boto3
 from botocore.exceptions import ClientError
-
-
-AWS_ACCESS_KEY_ID = "AKIAQ4MCMBZEI5NVIFGH"
-AWS_SECRET_KEY = "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"
-AWS_S3_BUCKET_NAME = "binarykeyvalue"
+from settings import AWS_SECRET_KEY, AWS_ACCESS_KEY_ID
 
 
 def s3():

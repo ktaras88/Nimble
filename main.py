@@ -2,7 +2,8 @@ from fastapi import FastAPI, UploadFile
 from starlette import status
 from starlette.exceptions import HTTPException
 from starlette.responses import JSONResponse, Response
-from files import s3, upload_file, download_file, AWS_S3_BUCKET_NAME
+from files import s3, upload_file, download_file
+from settings import AWS_S3_BUCKET_NAME
 
 app = FastAPI()
 

@@ -1,7 +1,8 @@
 import io
 from fastapi.testclient import TestClient
 from main import app
-from files import s3, AWS_S3_BUCKET_NAME
+from files import s3
+from settings import AWS_S3_BUCKET_NAME
 
 client = TestClient(app)
 
